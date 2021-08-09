@@ -27,4 +27,6 @@ execute if entity @s[tag=ChestLinkColor1] run scoreboard players operation @e[ta
 execute if entity @s[tag=ChestLinkColor2] run scoreboard players operation @e[tag=LinkedChest,distance=..1] Color2 = @s Color
 execute if entity @s[tag=ChestLinkColor3] run scoreboard players operation @e[tag=LinkedChest,distance=..1] Color3 = @s Color
 execute as @e[tag=LinkedChest,distance=..1] in chest:chest_storage run function chest:chest_backup/check
+execute as @e[tag=LinkedChest,distance=..1] at @s run data modify block ~ ~ ~ Items set from storage chest:compare Storage
+execute as @e[tag=LinkedChest,distance=..1] at @s run function chest:chests/linked_chest/check_link
 #------------------------------------------#

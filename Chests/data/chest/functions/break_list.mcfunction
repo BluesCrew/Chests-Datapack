@@ -3,7 +3,7 @@
 # Please don't claim this as your own work #
 #     Youtube : Blue's Production Team     #
 #==========================================#
-#-------------------TICK-------------------#
-execute as @e[scores={BreakChest=1..}] run function chest:chest_destroy
-execute as @e[tag=Chest] at @s run function chest:chest_main
+#--------------DESTROY CHEST---------------#
+execute if entity @s[tag=LinkedChest] run kill @e[type=item,distance=..1,nbt={Age:0s}]
+execute if entity @s[tag=LinkedChest] run loot spawn ~ ~ ~ loot chest:linked_chest
 #------------------------------------------#

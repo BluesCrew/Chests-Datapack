@@ -4,6 +4,7 @@
 #     Youtube : Blue's Production Team     #
 #==========================================#
 #-------------------TICK-------------------#
-execute as @e[scores={BreakChest=1..}] run function chest:chest_destroy
-execute as @e[tag=Chest] at @s run function chest:chest_main
+tag @s add PlayerInDistance
+execute as @e[tag=ChestLinkColor,distance=..0.7] run tp @s ~ ~-300 ~ 
+function chest:chests/linked_chest/respawn_villagers
 #------------------------------------------#

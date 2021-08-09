@@ -9,6 +9,4 @@ execute as @a[tag=PlacingChest] run function chest:get_cardinal
 execute if entity @s[tag=LinkedChestPlacer] run function chest:place_chest/linked_chest
 # execute if entity @s[tag=...ChestPlacer] run function chest:place_chest/...
 # execute if entity @s[tag=...ChestPlacer] run function chest:place_chest/...
-#-----------------MESSAGE------------------#
-tellraw @p ["",{"text":"Chest+ >","color":"dark_red"},{"text":" You successfuly placed a chest."}]
 #------------------------------------------#
