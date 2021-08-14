@@ -3,9 +3,10 @@
 # Please don't claim this as your own work #
 #     Youtube : Blue's Production Team     #
 #==========================================#
-#--------------DESTROY CHEST---------------#
-execute as @e[tag=ChestLinkColor] at @s unless block ~ ~ ~ chest run tp @s ~ ~-300 ~
-function chest:break_list
-kill @e[type=item,nbt={Age:0s,Item:{id:"minecraft:chest"}}]
-kill @s
+#-------------------TICK-------------------#
+tag @s remove PlayerInDistance
+data modify entity @s data.Items set from block ~ ~ ~ Items
+clone ~ ~-1 ~ ~ ~-1 ~ ~ ~ ~
+clone ~ 0 ~ ~ 0 ~ ~ ~1 ~
+execute if block ~ ~ ~ #chest:tile_id run data remove block ~ ~ ~ Items
 #------------------------------------------#

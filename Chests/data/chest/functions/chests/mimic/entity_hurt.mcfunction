@@ -3,9 +3,8 @@
 # Please don't claim this as your own work #
 #     Youtube : Blue's Production Team     #
 #==========================================#
-#--------------DESTROY CHEST---------------#
-execute as @e[tag=ChestLinkColor] at @s unless block ~ ~ ~ chest run tp @s ~ ~-300 ~
-function chest:break_list
-kill @e[type=item,nbt={Age:0s,Item:{id:"minecraft:chest"}}]
-kill @s
+#--------CHECK WHEN PLACER LEAVES----------#
+playsound block.chest.open hostile @a[distance=..20] ~ ~ ~ 0.1 2 1
+execute at @p run summon minecraft:evoker_fangs ~ ~ ~ 
+particle block minecraft:redstone_block ~ ~ ~ 0.6 0.6 0.6 0.1 10 normal
 #------------------------------------------#

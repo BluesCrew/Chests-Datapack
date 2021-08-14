@@ -1,0 +1,71 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:cod_spawn_egg",
+            "functions": [
+              {
+                "function": "minecraft:set_name",
+                "entity": "this",
+                "name": {
+                  "text": "Camouflaged Chest",
+                  "color": "dark_green",
+                  "bold": true,
+                  "italic": false
+                }
+              },
+              {
+                "function": "minecraft:set_nbt",
+                "tag": "{SpawnChest:1b,EntityTag:{id:\"minecraft:cod\",NoAI:1b,PersistenceRequired:0b,CustomNameVisible:0b,CanPickUpLoot:0b,Silent:1,CustomName:'{\"text\":\"\"}',Invulnerable:1,Tags:[\"ChestPlacer\",\"CamoufChestPlacer\"]}}"
+              },
+              {
+                "function": "minecraft:set_lore",
+                "entity": "this",
+                "lore": [
+                  {
+                    "text": "Use it on ground to place",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  [
+                    {
+                      "text": "a",
+                      "color": "gray",
+                      "italic": false
+                    },
+                    {
+                      "text": " Camouflaged Chest",
+                      "color": "dark_green",
+                      "italic": false
+                    },
+                    {
+                      "text": ".",
+                      "color": "gray",
+                      "italic": false
+                    }
+                  ],
+                  {
+                    "text": ""
+                  },
+                  {
+                    "text": "The chest will camouflage in",
+                    "color": "gray",
+                    "italic": false
+                  },
+                  {
+                    "text": "the block under it!",
+                    "color": "gray",
+                    "italic": false
+                  }
+                ],
+                "replace": false
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
