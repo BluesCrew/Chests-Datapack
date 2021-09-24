@@ -6,6 +6,7 @@
 #-------------------TICK-------------------#
 execute as @e[tag=Chest] at @s run function chest:chest_main
 
+execute as @e[type=item,nbt={OnGround:1b,Item:{id:"minecraft:chest",Count:1b}}] at @s run function chest:crafts/check
 # execute as @e[type=item,nbt={OnGround:1b},tag=!Registered] at @s run function chest:crafts/main
 
 execute as @e[tag=MimicEntity,nbt={HurtTime:10s}] at @s run function chest:chests/mimic/entity_hurt
