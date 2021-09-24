@@ -15,6 +15,5 @@ execute if entity @s[tag=MimicChestPlacer] run function chest:place_chest/mimic
 # execute if entity @s[tag=...ChestPlacer] run function chest:place_chest/...
 # execute if entity @s[tag=...ChestPlacer] run function chest:place_chest/...
 #-----------------RESETS-------------------#
-tag @e remove NewChest
+tag @e[tag=NewChest] remove NewChest
 #------------------------------------------#
-
